@@ -75,8 +75,8 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.pillRow}>
-            <span className={styles.pill}>Backend: http://localhost:5000</span>
-            <span className={styles.pill}>Frontend: http://localhost:3000</span>
+            <span className={styles.pill}>Backend: https://ai-product-discovery-gray.vercel.app</span>
+            <span className={styles.pill}>Frontend: https://frontend-ashish11.vercel.app</span>
           </div>
         </header>
 
