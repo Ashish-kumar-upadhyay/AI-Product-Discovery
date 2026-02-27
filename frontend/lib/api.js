@@ -1,5 +1,5 @@
 const BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL?.trim() || "http://localhost:5000";
+  process.env.NEXT_PUBLIC_API_BASE_URL?.trim() || "https://ai-product-discovery-gray.vercel.app";
 
 export async function fetchProducts({ category, q } = {}) {
   const params = new URLSearchParams();
