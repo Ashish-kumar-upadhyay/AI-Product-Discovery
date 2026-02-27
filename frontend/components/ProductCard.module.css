@@ -1,0 +1,96 @@
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 14px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  font-size: 15px;
+  line-height: 1.25;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+}
+
+.price {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(11, 94, 215, 0.08);
+  color: rgb(11, 94, 215);
+}
+
+.description {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.45;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.badge {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: #0f0f10;
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+  }
+  .description,
+  .badge,
+  .tag {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .badge {
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .tag {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .price {
+    background: rgba(91, 163, 255, 0.15);
+    color: rgb(91, 163, 255);
+  }
+}
+

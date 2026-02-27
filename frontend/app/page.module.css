@@ -1,0 +1,244 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(11, 94, 215, 0.08), transparent 28%);
+  padding: 28px 16px 60px;
+  font-family: var(--font-geist-sans);
+}
+
+.main {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.4;
+}
+
+.pillRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.pill {
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.askSection {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+  background: #fff;
+}
+
+.askForm {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.askInput {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  outline: none;
+  font-size: 14px;
+}
+
+.askInput:focus {
+  border-color: rgba(11, 94, 215, 0.65);
+  box-shadow: 0 0 0 4px rgba(11, 94, 215, 0.12);
+}
+
+.askButton {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 94, 215, 0.2);
+  background: rgb(11, 94, 215);
+  color: #fff;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.askButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.summaryBox {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 94, 215, 0.18);
+  background: rgba(11, 94, 215, 0.06);
+}
+
+.summaryLabel {
+  font-size: 12px;
+  font-weight: 750;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 6px;
+}
+
+.summaryText {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.45;
+}
+
+.clearButton {
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: rgb(11, 94, 215);
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+  width: fit-content;
+}
+
+.listSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: -0.2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.muted {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.error {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgb(180, 35, 24);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .header {
+    flex-direction: column;
+  }
+  .pillRow {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .askForm {
+    grid-template-columns: 1fr;
+  }
+  .askButton {
+    width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    background: radial-gradient(
+      1000px 320px at 10% -10%,
+      rgba(91, 163, 255, 0.25),
+      transparent 55%
+    );
+  }
+
+  .header {
+    background: rgba(20, 20, 22, 0.7);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .subtitle,
+  .pill,
+  .muted,
+  .summaryText,
+  .summaryLabel {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .pill {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .askSection {
+    background: #0f0f10;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .askInput {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .summaryBox {
+    background: rgba(91, 163, 255, 0.12);
+    border-color: rgba(91, 163, 255, 0.22);
+  }
+
+  .clearButton {
+    color: rgb(91, 163, 255);
+  }
+
+  .title {
+    color: rgba(255, 255, 255, 0.92);
+  }
+}
